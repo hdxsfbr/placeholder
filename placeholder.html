@@ -8,17 +8,28 @@
     <script type="text/javascript">
         $(function() {
             $(".placeholder").placeHolder();
+            $(".placeholder-with-text").placeHolder({defaultText:"Provided placeholder text"});
         });
     </script>
 </head>
 <body>
 <form>
-    <label>
-        <input class="placeholder" type="text" name="text1" value="Holding place">
-    </label>
-    <label>
-        <input class="placeholder" type="text" name="text2">
-    </label>
+    <div>
+        <label>Plugin's default placeholder text:
+            <input class="placeholder" type="text" name="text2">
+        </label>
+    </div>
+    <div>
+        <label>Placeholder text from value attribute:
+            <input class="placeholder" type="text" name="text1" value="Placeholder text...">
+        </label>
+    </div>
+    <div>
+        <label>Placeholder text from plugin's options:
+            <input class="placeholder-with-text" type="text" name="text2">
+        </label>
+    </div>
+
 </form>
 </body>
 </html>
